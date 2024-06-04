@@ -2,7 +2,6 @@ const getListStudentIds = function(arr) {
     if (!Array.isArray(arr)) {
 	return [];
     }
-
     return arr.map((studentId) => studentId.id);
 };
 
