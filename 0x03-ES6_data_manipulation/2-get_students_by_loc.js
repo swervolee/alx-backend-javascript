@@ -1,6 +1,6 @@
-const getStudentsByLocation = (students, city) => {
-  const arratyObjec = students.filter((funtion) => funtion.location === city);
-  return arratyObjec;
+const getStudentsByLocation = (arr, city) => {
+    const arrayResult = arr.filter((student) => student.location === city);
+    return result;
 };
 
 export default getStudentsByLocation;
