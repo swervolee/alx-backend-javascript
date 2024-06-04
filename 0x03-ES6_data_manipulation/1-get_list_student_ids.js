@@ -1,4 +1,4 @@
-const getListStudentIds = function(arr) {
+const getListStudentIds = (arr) => {
     if (!Array.isArray(arr)) {
 	return [];
     }
