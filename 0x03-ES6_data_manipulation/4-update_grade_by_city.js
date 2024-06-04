@@ -1,15 +1,10 @@
-const updateStudentGradeByCity = ((arr, city, grades) => {
-  const gradeMaps = new Map(grades.map(item => [item.studentId, item.grade]));
-  const cityLocation = arr.filter((student) => student.location === city)
-  const updatedGrades = cityLocation.map(student => {
-    if (gradeMaps.has(student.id)) {
-      student.grade = gradeMaps.get(student.id);
-      } else {
-	student.grade = "N/A";
-      }
-      return student;
+export default function updateStudentGradeByCity(students, city, newGrades) {
+  if (!Array.isArray(students) || !Array.isArray(newGrades)) {
+    return [];
+  }
+  const cityStudents = students.filter((student) => student.location === city).map((student) => {
+    const item2 = newGrades.find((student2) => student.id === student2.studentId);
+    return { ...student, grade: item2 ? item2.grade : 'N/A' };
   });
-  return updatedGrades;
-});
-
-export default updateStudentGradeByCity;
+  return cityStudents;
+}
