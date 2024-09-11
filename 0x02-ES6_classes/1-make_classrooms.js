@@ -1,15 +1,6 @@
-#!/usr/bin/node
+import ClassRoom from "./0-classroom.js";
 
-const ClassRoom = require("./0-classroom");
 
-function initializeRooms() {
-    const a = new ClassRoom(19);
-    const b = new ClassRoom(20);
-    const c = new ClassRoom(34);
-
-    result = [a, b, c]
-
-    return [a, b, c];
+export default function initializeRooms() {
+    return [new ClassRoom(19), new ClassRoom(20), new ClassRoom(34)];
 }
-
-module.exports = initializeRooms;
