@@ -1,44 +1,35 @@
-#!/usr/bin/node
-
-
-
-class Currency {
-    constructor(code, name) {
-	if (typeof code === 'string'){
+export default class Currency {
+  constructor(code, name) {
+	  if (typeof code === 'string'){
 	    this._code = code;
-	}
+	  }
 
-	if (typeof name === 'string') {
+	  if (typeof name === 'string') {
 	    this._name = name;
-	}    
-    }
+	  }    
+  }
 
-    get code() {
-	return this._code;
-    }
+  get code() {
+	  return this._code;
+  }
 
-    set code(val) {
-	if (typeof val === 'string') {
+  set code(val) {
+	  if (typeof val === 'string') {
 	    self._code = val;
-	}
-    }
+	  }
+  }
 
-    get name() {
-	return this._name;
-    }
+  get name() {
+	  return this._name;
+  }
 
-    set name(val) {
-	if (typeof val === 'string') {
+  set name(val) {
+	  if (typeof val === 'string') {
 	    this._name = val;
-	}
+	  }
+  }
 
-    }
-
-    displayFullCurrency() {
-	return `${this._name} (${this._code})`;
-    }
+  displayFullCurrency() {
+	  return `${this._name} (${this._code})`;
+  }
 }
-
-module.exports = Currency;
-
-    
