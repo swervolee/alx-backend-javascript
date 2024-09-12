@@ -12,9 +12,7 @@ export default class Pricing {
   }
 
   set amount(val) {
-	  if (typeof val === 'number') {
-	    this._amount = val;
-	  }
+	  this._amount = val;
   }
 
   get currency() {
@@ -22,13 +20,11 @@ export default class Pricing {
   }
 
   set currency(val) {
-	  if (typeof val === 'object') {
-	    this._currency = val;
-	  }
+	  this._currency = val;
   }
 
   displayFullPrice() {
-	  return `${this._amount} ${this._currency.name} (${this._currency.code})`;
+	  return `${this.amount} ${this.currency.name} (${this.currency.code})`;
   }
 
   static convertPrice(amount, conversionRate) {
