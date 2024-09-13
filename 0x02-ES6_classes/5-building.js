@@ -1,23 +1,15 @@
-#!/usr/bin/node
+export default class Building{
+  constructor(sqft) {
+    if (!typeof sqft === 'number') { throw new Error() }
+    this._sqft = sqft;
+    this.evacuationWarningMessage();
+  }
 
-class Building {
-    constructor(sqft) {
-	if (typeof sqft === "number") {
-	    self._sqft = sqft;
-	}
+  get sqft() {
+    return this._sqft;
+  }
 
-	this.evacuationWarningMessage();
-    }
-
-    get sqft() {
-	return self._sqft;
-    }
-
-    evacuationWarningMessage() {
-	throw Error("Building must overide evacuationWarningMessage");
-    }
+  evacuationWarningMessage() {
+    throw new Error("Building must override evacuationWarningMessage");
+  }
 }
-
-
-
-module.exports = Building;

@@ -1,7 +1,4 @@
-#!/usr/bin/node
-
-const HolbertonCourse = require("./2-hbtn_course");
-
+import HolbertonCourse from "./2-hbtn_course.js";
 
 const c1 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"])
 console.log(c1.name);
@@ -10,7 +7,7 @@ console.log(c1);
 
 try {
     c1.name = 12;
-} 
+}
 catch(err) {
     console.log(err);
 }

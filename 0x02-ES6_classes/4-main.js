@@ -1,7 +1,5 @@
-#!/usr/bin/node
-
-const Pricing = require("./4-pricing");
-const Currency = require("./3-currency");
+import Pricing from './4-pricing.js';
+import Currency from './3-currency.js';
 
 const p = new Pricing(100, new Currency("EUR", "Euro"))
 console.log(p);
