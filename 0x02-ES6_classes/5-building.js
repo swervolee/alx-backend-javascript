@@ -9,7 +9,11 @@ export default class Building{
     return this._sqft;
   }
 
+  set sqft(val) {
+    this._sqft = val;
+  }
+
   evacuationWarningMessage() {
-    throw new Error("Building must override evacuationWarningMessage");
+    if (this.constructor.name !== 'Building') throw new Error("Building must override evacuationWarningMessage");
   }
 }
