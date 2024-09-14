@@ -1,0 +1,12 @@
+export default class Car {
+  constructor(brand, motor, color) {
+    if (typeof brand !== 'string' || typeof motor !== 'string' || typeof color !== 'string') throw new Error()
+    self._brand = brand;
+    self._motor = motor;
+    self._color = color;
+  }
+
+  cloneCar() {
+    return Object.assign(Object.create(Object.getPrototypeOf(this)), this);
+  }
+}
