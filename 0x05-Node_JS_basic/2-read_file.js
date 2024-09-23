@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents(filename) {
+function countStudents (filename) {
   try {
     const fileContents = fs.readFileSync(filename, 'utf8');
     const lines = fileContents.split('\n').filter(line => line.trim() !== '');
