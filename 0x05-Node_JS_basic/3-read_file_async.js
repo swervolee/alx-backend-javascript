@@ -15,12 +15,11 @@ function countStudents(filename) {
 
         for (let i = 1; i < data.length; i += 1) {
           const line = data[i];
-          const line_array = line.split(",");
-          const fd = line_array[3]
-          if (!field[line_array[3]]) {
-            field[line_array[3]] = [];
+          const lineArray = line.split(',');
+          if (!field[lineArray[3]]) {
+            field[lineArray[3]] = [];
           }
-          field[line_array[3]].push(line_array[0]);
+          field[lineArray[3]].push(lineArray[0]);
           total += 1;
         }
 
